@@ -1,25 +1,25 @@
-import.java.util.*;
-import.java.util.Scanner.*;
+
+import java.util.Scanner;
 public class Main
 {
     public static void main(String[] args) 
     {
-        int number;
+        int a;
 		 Scanner in = new Scanner(System.in);
 		
      
-      number = in.nextInt();
-        if(number > 0)
+    a = in.nextInt();
+        if(a > 0)
         {
-            System.out.println(number+" is a positive number");
+            System.out.println(a+" is a positive number");
         }
-        else if(number < 0)
+        else if(a < 0)
         {
-            System.out.println(number+" is a negative number");
+            System.out.println(a+" is a negative number");
         }
         else
         {
-            System.out.println(number+" is neither positive nor negative");
+            System.out.println(a+" is neither positive nor negative");
         }
     }
 }
