@@ -7,7 +7,7 @@ public class Main
         int number;
 		 Scanner in = new Scanner(System.in);
 		
-      System.out.println("Enter an integer");
+     
       number = in.nextInt();
         if(number > 0)
         {
