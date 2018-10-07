@@ -7,11 +7,11 @@ public class EvenOdd {
         Scanner reader = new Scanner(System.in);
 
         
-        int num = reader.nextInt();
+        int a= reader.nextInt();
 
-        if(num % 2 == 0)
+        if(a % 2 == 0)
             System.out.println( " even");
-        else if(num<0)
+        else if(a<0)
             System.out.println("Invalid");
         else
             System.out.println( "  odd");
