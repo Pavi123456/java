@@ -4,8 +4,8 @@ class vowel_con
 	public static void main(String[ ] arg)
 	{
 	int i=0;
-	Scanner sc=new Scanner(System.in);
-	char ch=sc.next( ).charAt(0);	 
+	Scanner a=new Scanner(System.in);
+	char ch=a.next( ).charAt(0);	 
 	//char ch=sc.nextChar();
 	switch(ch)
 	{
