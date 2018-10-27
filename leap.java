@@ -7,6 +7,7 @@ public class leap
        int yr;
        Scanner scan = new Scanner(System.in);
 	   
+     
        yr = scan.nextInt();
 	   
        if((yr%4 == 0) && (yr%100!=0))
