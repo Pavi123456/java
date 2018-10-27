@@ -6,6 +6,6 @@ class STR
         String str;
         Scanner scan = new Scanner(System.in);
         str= scan.nextLine();
-		        System.out.print(str);
+		        System.out.print(str+".");
     }
 }
