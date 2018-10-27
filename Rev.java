@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Rev
+ class Rev
 {
    public static void main(String args[])
    {
