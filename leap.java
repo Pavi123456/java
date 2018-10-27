@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class leap
+class leap
 {
     public static void main(String args[])
     {
