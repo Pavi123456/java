@@ -3,9 +3,9 @@ void main()
 {
 	long int a[100000],v,i;
 	int f=0;
-	printf("enter a no");
+	//printf("enter a no");
 	scanf("%ld",&v);
-		printf("enter  numbers\n");
+		//printf("enter  numbers\n");
 	for(i=0;i<v;i++)
 	{
 		scanf("%ld",&a[i]);
