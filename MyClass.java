@@ -1,43 +1,55 @@
-import java.util.Scanner;
+import java.util.*;
+import java.lang.Math;
 class MyClass {
     public static void main(String args[]) {
-        int tmc,mc,n,max,pos,temp,sum;
-        sum=pos=0;
-        boolean flag=true;
-        int a[]=new int[100000];
         Scanner sc = new Scanner(System.in);
-        n=sc.nextInt();
+        int n = sc.nextInt();
+        int ip = n;
+        int a[]=new int[10000];
+        int c[]=new int[10000];
+        String b[]=new String[10000];
+        n=(int)Math.pow(2,ip);
+        //System.out.println(n);
         for(int i=0;i<n;i++){
-            a[i]=sc.nextInt();
-            sum=sum+a[i];
-        }
-        for(int i=1;(i<n)&&(flag);i++){
-            if(a[i]!=a[0]){
-                flag=false;
+            a[i]=i;
+            //System.out.println(a[i]);
+            int temp = i;
+            int count =0;
+            while(temp>0){
+                int j=temp%2;
+                if(j==1){
+                    count++;
+                }
+                temp=temp/2;
             }
+            c[i]=count;
+            b[i]=Integer.toBinaryString(a[i]);
+            for(int l=0;b[i].length()<ip;l++){
+                b[i]="0"+b[i];
+            }
+            //b[i]=String.format("%4s", b[i]);
+            //b[i]=b[i].replace(" ","0");
+            //b[0]="0000";
+            //System.out.println("no = "+a[i]+" binary = "+b[i]+" ones = "+c[i]);
+            //System.out.println("no = "+a[i]+" binary = "+b[i]);
         }
-        if(flag){
-            System.out.println(sum);
-        }
-        if(!flag){
-            max=a[0];
-            for(int i=1;i<n;i++){
-                if(max<a[i]){
-                    max=a[i];
-                    pos=i;
+        for(int j=0;j<n;j++){
+            for(int i=0;i<n-j-1;i++){
+                if(c[i]==c[i+1]){
+                    if(a[i]>a[i+1]){
+                        int tempc = c[i];       int tempa = a[i];     String temps = b[i];
+                    c[i]=c[i+1];                a[i] = a[i+1];    b[i] = b[i+1];
+                    c[i+1]=tempc;                a[i+1] = tempa;   b[i+1] = temps;
+                    }
+                }
+                else if(c[i]>c[i+1]){
+                    int tempc = c[i]; int tempa = a[i];     String temps = b[i];
+                    c[i]=c[i+1];      a[i] = a[i+1];        b[i] = b[i+1];
+                    c[i+1]=tempc;      a[i+1] = tempa;       b[i+1] = temps;
                 }
             }
-            if(pos==n-1){
-                temp=a[pos-1];
-            }
-            else if(pos==0){
-                temp=a[pos+1];
-            }else{
-            temp=Math.max(a[pos-1],a[pos+1]);
-            }
-            mc=temp+1;
-            tmc=mc+sum-max;
-            System.out.println(tmc);
         }
+        for(int i=0;i<n;i++)
+            System.out.println(b[i]);
     }
 }
